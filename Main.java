@@ -68,8 +68,6 @@ class Main {
     Auteur aristophane = new Auteur("Aristophane", 5, citation_thesmophories, 100, citation_guêpes, 0, "");
 
     // Ajoutez vos tests ici
-    
-    assert 2 == 2;
 
     //assertion pour les méthodes de la classe Auteur
 
@@ -91,5 +89,43 @@ class Main {
     assert sophocle.CitationStyle(Style.TRAGÉDIE).equals(citation_antigone);
     assert sophocle.CitationStyle(Style.COMÉDIE).equals("");
     assert sophocle.CitationStyle(Style.DRAME).equals(citation_limiers);
+
+    //assertion pour les méthodes de la classe Style
+
+    assert Style.COMÉDIE.toString().equals("Comédie");
+    assert Style.TRAGÉDIE.toString().equals("Tragédie");
+    assert Style.DRAME.toString().equals("Drame");
+
+    //assertion pour les méthodes de la classe Epreuve
+
+    Epreuve antigone = new Epreuve(1000, Style.TRAGÉDIE);
+    Epreuve limiers = new Epreuve(2000, Style.DRAME);
+    Epreuve guêpes = new Epreuve(3000, Style.COMÉDIE);
+
+    assert antigone.getNombreSpectateurs() == 1000;
+    assert antigone.getStyle() == Style.TRAGÉDIE;
+
+    assert limiers.getNombreSpectateurs() == 2000;
+    assert limiers.getStyle() == Style.DRAME;
+
+    assert guêpes.getNombreSpectateurs() == 3000;
+    assert guêpes.getStyle() == Style.COMÉDIE;
+
+    antigone.setNombreSpectateurs(2000);
+    antigone.setStyle(Style.DRAME);
+
+    assert antigone.getNombreSpectateurs() == 2000;
+    assert antigone.getStyle() == Style.DRAME;
+
+    //assertion de la Classe Journée
+
+    Journée journée = new Journée(Style.COMÉDIE, Style.TRAGÉDIE, Style.DRAME);
+    
+    assert journée.get_matin() == Style.COMÉDIE;
+    assert journée.get_après_midi() == Style.TRAGÉDIE;
+
+
+
+
   }
 }
