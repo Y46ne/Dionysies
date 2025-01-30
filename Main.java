@@ -70,5 +70,17 @@ class Main {
     // Ajoutez vos tests ici
     
     assert 2 == 2;
+
+    //assertion pour les méthodes de la classe Auteur
+
+    assert sophocle.getNom().equals("Sophocle");
+    assert sophocle.getCitation_tragédie().equals(citation_antigone);
+    assert sophocle.getQualité_tragédie() == 95;
+    assert sophocle.getCitation_comédie().equals("");
+    assert sophocle.getQualité_comédie() == 0;
+    assert sophocle.getCitation_drame().equals(citation_limiers);
+    assert sophocle.getQualité_drame() == 60;
+
+
   }
 }

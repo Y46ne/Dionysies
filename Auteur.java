@@ -89,14 +89,7 @@ class Auteur {
   @Override
   
   public String toString(){
-    return "Auteur{" +
-        "L'honorable '" + nom + '\'' +
-        ", citation_tragédie='" + citation_tragédie + '\'' +
-        ", qualité_tragédie=" + qualité_tragédie +
-        ", citation_comédie='" + citation_comédie + '\'' +
-        ", qualité_comédie=" + qualité_comédie +
-        ", citation_drame='" + citation_drame + '\'' +
-        ", qualité_drame=" + qualité_drame +
-        '}';
+    return "L'honorable '" + nom;
+        
   }
 }
