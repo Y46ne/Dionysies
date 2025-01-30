@@ -82,5 +82,14 @@ class Main {
     assert sophocle.getQualité_drame() == 60;
 
 
+    //test des méthodes QualiteStyle et citationStyle de la classe Auteur
+
+    assert sophocle.QualitéStyle(Style.TRAGÉDIE) == 95;
+    assert sophocle.QualitéStyle(Style.COMÉDIE) == 0;
+    assert sophocle.QualitéStyle(Style.DRAME) == 60;
+
+    assert sophocle.CitationStyle(Style.TRAGÉDIE).equals(citation_antigone);
+    assert sophocle.CitationStyle(Style.COMÉDIE).equals("");
+    assert sophocle.CitationStyle(Style.DRAME).equals(citation_limiers);
   }
 }

@@ -85,6 +85,26 @@ class Auteur {
     }
   }
 
+  public int QualitéStyle(Style style) {
+    if (style == Style.COMÉDIE) {
+      return qualité_comédie;
+    } else if (style == Style.TRAGÉDIE) {
+      return qualité_tragédie;
+    } else {
+      return qualité_drame;
+    }
+  }
+
+  public String CitationStyle(Style style) {
+    if (style == Style.COMÉDIE) {
+      return citation_comédie;
+    } else if (style == Style.TRAGÉDIE) {
+      return citation_tragédie;
+    } else {
+      return citation_drame;
+    }
+  }
+
 
   @Override
   
