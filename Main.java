@@ -117,6 +117,15 @@ class Main {
     assert antigone.getNombreSpectateurs() == 2000;
     assert antigone.getStyle() == Style.DRAME;
 
+    limiers.setNombreSpectateurs(3000);
+
+    assert limiers.getNombreSpectateurs() == 3000;
+
+    limiers.setStyle(Style.COMÉDIE);
+
+    assert limiers.getStyle() == Style.COMÉDIE;
+
+
     //assertion de la Classe Journée
 
     Journée journée = new Journée(Style.COMÉDIE, Style.TRAGÉDIE, Style.DRAME);
@@ -124,8 +133,8 @@ class Main {
     assert journée.get_matin() == Style.COMÉDIE;
     assert journée.get_après_midi() == Style.TRAGÉDIE;
 
-
-
-
+    //Création d'une épreuve de tragédie avec la Class Epreuve
+    antigone.addAuteur(sophocle);
+    antigone.addAuteur(euripide);
   }
 }
